@@ -117,7 +117,7 @@ function generateMarkdown(data) {
 
   ${data.usage} \n
   
-  Snippet of the deployed application: \n
+  Preview of the deployed application: \n
 
   ![${data.altText}](./assets/images/${data.usagePic})
 
