@@ -59,3 +59,89 @@ function renderLicenseTOC(license) {
     return '';
   } return `- [License](#license)`;
 }
+
+
+function generateMarkdown(data) {
+  
+  return `# ${data.title}
+
+  <br>
+
+  ${renderLicenseBadge(data.license)}
+
+  <br>
+
+  ## Description 
+  - ${data.motivation}
+  - ${data.goal}
+  - ${data.functionality}
+  - ${data.acquisition}
+
+  <br>
+  
+  ## Table of Contents
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Credits](#credits)  
+  - [Contribution](#contribution)
+  - [Tests](#tests)
+  - [Contact Information](#contact-information)
+  ${renderLicenseTOC(data.license)}
+  
+  <br>
+
+  ## Installation
+
+  ${data.installation}
+  
+  <br>
+
+  ## Usage
+
+  ${data.usage}\
+  
+  Here's a screenshot of the deployed application:\
+
+  ![${data.altText}](${data.location})
+  
+  <br>
+
+  ## Credits
+  
+  Collaborators:\
+  ${data.collaborators}\
+  
+  Third Party Assets:\
+  ${data.thirdParty}
+
+  <br>
+
+  ## Contribution
+  
+  Guidelines for contribution:\
+
+  ${data.contribute}
+
+  <br>
+
+  ## Tests
+
+  Instructions for testing:\
+
+  ${data.test}
+  
+  <br>
+  
+  ## Contact Information
+  
+  Visit my GitHub repository to see more: https://github.com/${data.username} \n
+  Contact me if you have any questions at: ${data.email}
+
+  <br>
+  
+  ${renderLicenseSection(data.license)}
+
+`;
+}
+
+module.exports = generateMarkdown;
