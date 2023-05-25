@@ -12,7 +12,7 @@ const questions = require('./utils/questions');
 function init() {
     inquirer
         .prompt(questions).then((data) => {
-            fs.writeFile('README.md', generateMarkdown(data), (err) =>
+            fs.writeFile('sampleREADME.md', generateMarkdown(data), (err) =>
                 err ? console.log(err) : console.log('Success!')
             );
         });
