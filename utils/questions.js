@@ -1,3 +1,6 @@
+//===============================================================================================================================================//
+//=============================== Questions: that will be prompted for the user to answer in the command line ===================================//
+
 const questions = [
     {
         type: 'input',
@@ -70,6 +73,9 @@ const questions = [
         choices: ['Unlicense', 'GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'None'],
         name: 'license',
     },
-]
+];
+
+//===============================================================================================================================================//
+//========================= Export Module: exports the questions arrray for it to be referred in the index.js file ==============================//
 
 module.exports = questions

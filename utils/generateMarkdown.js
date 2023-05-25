@@ -24,7 +24,8 @@ function renderLicenseBadge(license) {
     case 'Boost Software License 1.0':
       return licenseBadge += '![Boost Software License 1.0](https://img.shields.io/badge/license-Boost%20Software%20License%201.0-lightgrey.svg)';
   }
-}
+};
+
 //===============================================================================================================================================//
 //========================================= Render License Link: function that returns the license link =========================================//
 
@@ -51,7 +52,8 @@ function renderLicenseLink(license) {
     case 'Boost Software License 1.0':
       return licenseLink += '[Boost Software License 1.0](https://choosealicense.com/licenses/bsl-1.0/)';
   }
-}
+};
+
 //===============================================================================================================================================//
 //====================================== Render License Section: function that returns the license section ======================================//
   
@@ -61,7 +63,7 @@ function renderLicenseSection(license) {
     return '';
   } return `## License
 The application is covered under the ${renderLicenseLink(license)}. Please refer to the documentation for more details.`;
-}
+};
 
 //===============================================================================================================================================//
 //========================== Render License TOC: function that returns the license section to the table of contents =============================//
@@ -71,7 +73,7 @@ function renderLicenseTOC(license) {
     // Returns an empty string if user selected 'None'
     return '';
   } return `- [License](#license)`;
-}
+};
 
 //===============================================================================================================================================//
 //======================================= Generate Markdown: function to generate markdown for README ===========================================//
@@ -154,8 +156,10 @@ function generateMarkdown(data) {
   3. Reason for the email.
   \n
   Much appreciated.
-`;
-}
+`
+};
 
-// Exports the generateMarkdown function for it to be used
-module.exports = generateMarkdown;
+//===============================================================================================================================================//
+//======================= Export Module: exports the generateMarkdown function for it to be used in the index.js file ===========================//
+
+module.exports = generateMarkdown
