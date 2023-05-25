@@ -119,7 +119,7 @@ ${renderLicenseBadge(data.license)}
   
   Preview of the deployed application: \n
 
-  ![${data.altText}](./assets/images/${data.usagePic})
+  ![${data.altText}](assets/images/${data.usagePic})
 
   <br>
 

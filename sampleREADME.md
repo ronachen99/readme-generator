@@ -39,7 +39,7 @@
   Preview of the deployed application: 
 
 
-  ![Screenshot of the integrated terminal with inquirer prompts and answers shown](./assets/images/screenshot.png)
+  ![Screenshot of the integrated terminal with inquirer prompts and answers shown](assets/images/screenshot.png)
 
   <br>
 
