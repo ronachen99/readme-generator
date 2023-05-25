@@ -56,7 +56,7 @@ function renderLicenseLink(license) {
 
 //===============================================================================================================================================//
 //====================================== Render License Section: function that returns the license section ======================================//
-  
+
 function renderLicenseSection(license) {
   if (license === 'None') {
     // Returns an empty string if user selected 'None'
@@ -79,16 +79,16 @@ function renderLicenseTOC(license) {
 //======================================= Generate Markdown: function to generate markdown for README ===========================================//
 
 function generateMarkdown(data) {
-  
+
   return `# ${data.title}
 
   <br>
 
-  ${renderLicenseBadge(data.license)}
+${renderLicenseBadge(data.license)}
 
   <br>
 
-  ## Description 
+## Description 
   - ${data.motivation}
   - ${data.goal}
   - ${data.functionality}
@@ -96,7 +96,7 @@ function generateMarkdown(data) {
 
   <br>
   
-  ## Table of Contents
+## Table of Contents
   - [Installation](#installation)
   - [Usage](#usage)
   ${renderLicenseTOC(data.license)}
@@ -107,13 +107,13 @@ function generateMarkdown(data) {
   
   <br>
 
-  ## Installation
+## Installation
   
   ${data.installation}
   
   <br>
 
-  ## Usage
+## Usage
 
   ${data.usage} \n
   
@@ -123,11 +123,11 @@ function generateMarkdown(data) {
 
   <br>
 
-  ${renderLicenseSection(data.license)}
+${renderLicenseSection(data.license)}
 
   <br>
 
-  ## Contributing
+## Contributing
   
   Guidelines for contribution: \n
 
@@ -135,7 +135,7 @@ function generateMarkdown(data) {
 
   <br>
 
-  ## Tests
+## Tests
 
   Instructions for testing: \n
 
@@ -143,7 +143,7 @@ function generateMarkdown(data) {
   
   <br>
   
-  ## Questions
+## Questions
   
   Visit my GitHub at https://github.com/${data.username} \n
   Contact me at ${data.email} \n
@@ -155,8 +155,7 @@ function generateMarkdown(data) {
   2. Your name and contact information.
   3. Reason for the email.
   \n
-  Much appreciated.
-`
+  Much appreciated.`
 };
 
 //===============================================================================================================================================//

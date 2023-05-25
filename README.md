@@ -9,22 +9,17 @@ Good documentation is crucial for both developers and users. It helps developers
 <br>
 
 ## Table of Contents
-
-- [Professional README Generator](#professional-readme-generator)
-  - [Description](#description)
-  - [Table of Contents](#table-of-contents)
   - [Demonstration](#demonstration)
   - [Installation](#installation)
   - [Usage](#usage)
   - [Credits](#credits)
   - [Deployed Webpage](#deployed-webpage)
-  - [License](#license)
 
 <br>
 
 ## Demonstration
 
-Here is a short demonstration of the application: https://drive.google.com/file/d/1OAbdZ3JZJRNyK4_HUfOie_vUnRUvyND7/view
+Here is a short demonstration of the application: https://drive.google.com/file/d/1BeJltQplQ6x6fIz3zvabcfyIRwx-4Sph/view
 
 Here is a preview of the application:\
 ![Screenshot of the integrated terminal with inquirer prompts and answers shown](./assets/images/Screenshot.png)
@@ -70,11 +65,3 @@ The application incorporates an external npm package called Inquirer, which is a
 ## Deployed Webpage
 
 https://ronachen99.github.io/readme-generator/
-
-<br>
-
-## License
-
-N/A
-
-<br>
