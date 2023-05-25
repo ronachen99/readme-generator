@@ -22,7 +22,7 @@ Good documentation is crucial for both developers and users. It helps developers
 Here is a short demonstration of the application: https://drive.google.com/file/d/1BeJltQplQ6x6fIz3zvabcfyIRwx-4Sph/view
 
 Here is a preview of the application:\
-![Screenshot of the integrated terminal with inquirer prompts and answers shown](assets/images/Screenshot.png)
+![Screenshot of the integrated terminal with inquirer prompts and answers shown](/assets/images/Screenshot.png)
 
 <br>
 
