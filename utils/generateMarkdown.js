@@ -45,3 +45,17 @@ function renderLicenseLink(license) {
       return licenseLink += '[Boost Software License 1.0](https://choosealicense.com/licenses/bsl-1.0/)';
   }
 }
+  
+function renderLicenseSection(license) {
+  if (license === 'None') {
+    return '';
+  } return `## License
+  Please refer to the license documentation here: ${renderLicenseLink(license)}`;
+}
+
+
+function renderLicenseTOC(license) {
+  if (license === 'None') {
+    return '';
+  } return `- [License](#license)`;
+}
