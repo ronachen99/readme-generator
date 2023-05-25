@@ -36,23 +36,13 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'Please add a screenshot! Where is your screenshot located? (i.e. assets/images/screenshot.png).',
-        name: 'location',
+        message: 'Please import an image (or .gif) of the deployed application to the images folder (that is in the assets folder). What is the name of the image? (i.e. screenshot.png).',
+        name: 'usagePic',
     },
     {
         type: 'input',
-        message: 'What is your screenshot about? (i.e. colouring hero banner with a welcome message).',
+        message: 'What is your image about? (i.e. person standing on the roof of a car looking at the night sky).',
         name: 'altText',
-    },
-    {
-        type: 'input',
-        message: 'List your collaborators, if any, with links to their GitHub profiles.',
-        name: 'collaborators',
-    },
-    {
-        type: 'input',
-        message: 'List third party assets or tutorials used with links, if any.',
-        name: 'thirdParty',
     },
     {
         type: 'input',

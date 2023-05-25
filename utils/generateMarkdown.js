@@ -1,4 +1,8 @@
+//===============================================================================================================================================//
+//======================= Render License Badge: function that returns a license badge based on which license is passed in =======================//
+
 function renderLicenseBadge(license) {
+  // Returns an empty string if user selected 'None'
   let licenseBadge = ''
   switch (license) {
     case 'None':
@@ -21,8 +25,11 @@ function renderLicenseBadge(license) {
       return licenseBadge += '![Boost Software License 1.0](https://img.shields.io/badge/license-Boost%20Software%20License%201.0-lightgrey.svg)';
   }
 }
+//===============================================================================================================================================//
+//========================================= Render License Link: function that returns the license link =========================================//
 
 function renderLicenseLink(license) {
+  // Returns an empty string if user selected 'None'
   let licenseLink = ''
   switch (license) {
     case 'None':
@@ -45,21 +52,29 @@ function renderLicenseLink(license) {
       return licenseLink += '[Boost Software License 1.0](https://choosealicense.com/licenses/bsl-1.0/)';
   }
 }
+//===============================================================================================================================================//
+//====================================== Render License Section: function that returns the license section ======================================//
   
 function renderLicenseSection(license) {
   if (license === 'None') {
+    // Returns an empty string if user selected 'None'
     return '';
   } return `## License
-  Please refer to the license documentation here: ${renderLicenseLink(license)}`;
+The application is covered under the ${renderLicenseLink(license)}. Please refer to the documentation for more details.`;
 }
 
+//===============================================================================================================================================//
+//========================== Render License TOC: function that returns the license section to the table of contents =============================//
 
 function renderLicenseTOC(license) {
   if (license === 'None') {
+    // Returns an empty string if user selected 'None'
     return '';
   } return `- [License](#license)`;
 }
 
+//===============================================================================================================================================//
+//======================================= Generate Markdown: function to generate markdown for README ===========================================//
 
 function generateMarkdown(data) {
   
@@ -82,43 +97,37 @@ function generateMarkdown(data) {
   ## Table of Contents
   - [Installation](#installation)
   - [Usage](#usage)
-  - [Credits](#credits)  
-  - [Contribution](#contribution)
-  - [Tests](#tests)
-  - [Contact Information](#contact-information)
   ${renderLicenseTOC(data.license)}
+  - [Contributing](#contributing)
+  - [Tests](#tests)
+  - [Questions](#questions)
+
   
   <br>
 
   ## Installation
-
+  
   ${data.installation}
   
   <br>
 
   ## Usage
 
-  ${data.usage}\
+  ${data.usage} \n
   
-  Here's a screenshot of the deployed application:\
+  Snippet of the deployed application: \n
 
-  ![${data.altText}](${data.location})
-  
-  <br>
-
-  ## Credits
-  
-  Collaborators:\
-  ${data.collaborators}\
-  
-  Third Party Assets:\
-  ${data.thirdParty}
+  ![${data.altText}](./assets/images/${data.usagePic})
 
   <br>
 
-  ## Contribution
+  ${renderLicenseSection(data.license)}
+
+  <br>
+
+  ## Contributing
   
-  Guidelines for contribution:\
+  Guidelines for contribution: \n
 
   ${data.contribute}
 
@@ -126,22 +135,27 @@ function generateMarkdown(data) {
 
   ## Tests
 
-  Instructions for testing:\
+  Instructions for testing: \n
 
   ${data.test}
   
   <br>
   
-  ## Contact Information
+  ## Questions
   
-  Visit my GitHub repository to see more: https://github.com/${data.username} \n
-  Contact me if you have any questions at: ${data.email}
-
+  Visit my GitHub at https://github.com/${data.username} \n
+  Contact me at ${data.email} \n
+  
   <br>
   
-  ${renderLicenseSection(data.license)}
-
+  Please include the following in the email:
+  1. The repository name in the subject line (i.e., readme-generator).
+  2. Your name and contact information.
+  3. Reason for the email.
+  \n
+  Much appreciated.
 `;
 }
 
+// Exports the generateMarkdown function for it to be used
 module.exports = generateMarkdown;
