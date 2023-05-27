@@ -66,16 +66,6 @@ The application is covered under the ${renderLicenseLink(license)}. Please refer
 };
 
 //===============================================================================================================================================//
-//========================== Render License TOC: function that returns the license section to the table of contents =============================//
-
-function renderLicenseTOC(license) {
-  if (license === 'None') {
-    // Returns an empty string if user selected 'None'
-    return '';
-  } return `- [License](#license)`;
-};
-
-//===============================================================================================================================================//
 //======================================= Generate Markdown: function to generate markdown for README ===========================================//
 
 function generateMarkdown(data) {
@@ -99,11 +89,10 @@ ${renderLicenseBadge(data.license)}
 ## Table of Contents
   - [Installation](#installation)
   - [Usage](#usage)
-  ${renderLicenseTOC(data.license)}
   - [Contributing](#contributing)
   - [Tests](#tests)
   - [Questions](#questions)
-
+  ${data.license === 'None' ? '' : '- [License](#license)'}
   
   <br>
 
