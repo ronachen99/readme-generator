@@ -12,8 +12,8 @@ const questions = require('./utils/questions');
 function init() {
     inquirer
         .prompt(questions).then((data) => {
-            fs.writeFile('sampleREADME.md', generateMarkdown(data), (err) =>
-                err ? console.log(err) : console.log('Success!')
+            fs.writeFile('dist/sampleREADME.md', generateMarkdown(data), (err) =>
+                err ? console.log(err) : console.log('Success! Find sampleREADME.md in the dist folder!')
             );
         });
 }

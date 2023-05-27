@@ -53,6 +53,7 @@ To access the application:
 2. Right click on the index.js in the explorer section and select "Open in Integrated Terminal". 
 3. Type "node index init" in the terminal.
 4. Answer all the questions.
+5. Find the sampleREADMe.md that you've just created in the dist folder.
 
 <br>
 
