@@ -60,9 +60,3 @@ To access the application:
 ## Credits
 
 The application incorporates an external npm package called Inquirer, which is a collection of common interactive command line user interfaces.
-
-<br>
-
-## Deployed Webpage
-
-https://ronachen99.github.io/readme-generator/
